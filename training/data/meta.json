@@ -1,0 +1,141 @@
+{
+  "categories": [
+    "atrocity_context",
+    "caste_atrocity",
+    "child_safety_concern",
+    "cybercrime_online_abuse",
+    "depression_hopelessness",
+    "displacement_arson",
+    "elder_abuse",
+    "family_murder",
+    "financial_exploitation",
+    "immediate_danger",
+    "intimidation_threat",
+    "legal_dispute",
+    "physical_safety_abuse",
+    "police_noncooperation",
+    "rape_sexual_violence",
+    "severe_trauma_fear",
+    "sexual_harassment_assault",
+    "social_boycott",
+    "social_isolation",
+    "substance_related",
+    "suicidal_ideation",
+    "vulnerability_context",
+    "witness_intimidation",
+    "workplace_harassment"
+  ],
+  "holdout_frac": 0.25,
+  "seed": 20260916,
+  "note": "Synthetic corpus. Labels derived from the Sahayk rubric, not clinician-annotated.",
+  "baseline_caveat": "lexicon_baseline_on_test measures the rule engine on wording chosen specifically to fall outside its phrase list. A near-total miss rate is therefore BY CONSTRUCTION and is not an estimate of real-world recall. Read it as: this is the size of the blind spot the model is meant to cover, not as a claim that the rules fail 99% of real calls.",
+  "splits": [
+    {
+      "split": "train",
+      "n": 30000,
+      "bands": {
+        "Critical": 14895,
+        "High": 5788,
+        "Low": 6055,
+        "Moderate": 3262
+      },
+      "languages": {
+        "en": 12531,
+        "gu": 3911,
+        "hi": 5946,
+        "rom": 7612
+      },
+      "categories": {
+        "atrocity_context": 1694,
+        "caste_atrocity": 1245,
+        "child_safety_concern": 1238,
+        "cybercrime_online_abuse": 1053,
+        "depression_hopelessness": 2124,
+        "displacement_arson": 1063,
+        "elder_abuse": 1164,
+        "family_murder": 1045,
+        "financial_exploitation": 2009,
+        "immediate_danger": 999,
+        "intimidation_threat": 1938,
+        "legal_dispute": 1559,
+        "physical_safety_abuse": 1953,
+        "police_noncooperation": 1290,
+        "rape_sexual_violence": 950,
+        "severe_trauma_fear": 2519,
+        "sexual_harassment_assault": 1130,
+        "social_boycott": 1283,
+        "social_isolation": 2408,
+        "substance_related": 1249,
+        "suicidal_ideation": 1180,
+        "vulnerability_context": 1636,
+        "witness_intimidation": 1426,
+        "workplace_harassment": 1080
+      }
+    },
+    {
+      "split": "test",
+      "n": 6000,
+      "bands": {
+        "Critical": 2910,
+        "High": 1177,
+        "Low": 1246,
+        "Moderate": 667
+      },
+      "languages": {
+        "en": 2479,
+        "gu": 827,
+        "hi": 1197,
+        "rom": 1497
+      },
+      "categories": {
+        "atrocity_context": 326,
+        "caste_atrocity": 261,
+        "child_safety_concern": 257,
+        "cybercrime_online_abuse": 243,
+        "depression_hopelessness": 451,
+        "displacement_arson": 179,
+        "elder_abuse": 250,
+        "family_murder": 187,
+        "financial_exploitation": 354,
+        "immediate_danger": 188,
+        "intimidation_threat": 398,
+        "legal_dispute": 306,
+        "physical_safety_abuse": 355,
+        "police_noncooperation": 249,
+        "rape_sexual_violence": 217,
+        "severe_trauma_fear": 499,
+        "sexual_harassment_assault": 246,
+        "social_boycott": 248,
+        "social_isolation": 475,
+        "substance_related": 268,
+        "suicidal_ideation": 264,
+        "vulnerability_context": 352,
+        "witness_intimidation": 237,
+        "workplace_harassment": 200
+      }
+    }
+  ],
+  "lexicon_baseline_on_test": {
+    "risk_samples": 4941,
+    "completely_missed": 3600,
+    "miss_rate": 0.7286,
+    "per_language": {
+      "en": {
+        "n": 2018,
+        "miss_rate": 0.6511
+      },
+      "gu": {
+        "n": 681,
+        "miss_rate": 0.8928
+      },
+      "hi": {
+        "n": 1011,
+        "miss_rate": 0.7082
+      },
+      "rom": {
+        "n": 1231,
+        "miss_rate": 0.7815
+      }
+    }
+  }
+}

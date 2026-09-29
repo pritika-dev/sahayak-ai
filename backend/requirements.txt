@@ -1,0 +1,26 @@
+fastapi==0.141.1
+joblib==1.5.2
+librosa==1.0.0
+llvmlite==0.49.0
+numba==0.67.0
+numpy==2.4.4
+pydantic==2.13.5
+pydantic_core==2.46.5
+python-multipart
+scikit-learn==1.8.0
+scipy==1.17.1
+soundfile==0.14.0
+uvicorn==0.52.4
+vaderSentiment==3.3.2
+
+# scikit-learn + joblib load and run models/sahayk_triage.joblib (4 MB,
+# CPU-only, ~2 ms per message). If they are missing or the pickle will
+# not load, ml_model.py reports itself unavailable and scoring.py falls
+# back to pure rule matching — the app still runs, less accurately.
+#
+# Deliberately NOT listed: torch and transformers. They are needed only
+# to run a fine-tuned transformer (training/train_transformer.py), which
+# is an optional upgrade, and they would add ~2 GB to an install that
+# otherwise takes seconds. To use one: pip install transformers torch,
+# then drop the trained directory into models/transformer/ — ml_model.py
+# picks it up with no code change.

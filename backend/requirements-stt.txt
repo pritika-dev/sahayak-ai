@@ -1,0 +1,6 @@
+# Optional: automatic speech-to-text for uploaded call recordings (stt.py).
+# pip install -r requirements.txt -r requirements-stt.txt
+# Needs ~300-600 MB extra RAM and downloads the Whisper model from Hugging Face on
+# first use, so it does not fit Render's free 512 MB plan. Choose the model with
+# SAHAYK_STT_MODEL=tiny|base|small (bigger = better Hindi/Gujarati, slower).
+faster-whisper

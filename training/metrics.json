@@ -1,0 +1,347 @@
+{
+  "n_test": 6000,
+  "categories": {
+    "atrocity_context": {
+      "precision": 0.91,
+      "recall": 0.525,
+      "f1": 0.665,
+      "support": 326,
+      "threshold": 0.65,
+      "hedge_threshold": 0.56,
+      "recall_first": false
+    },
+    "caste_atrocity": {
+      "precision": 0.73,
+      "recall": 0.985,
+      "f1": 0.838,
+      "support": 261,
+      "threshold": 0.35,
+      "hedge_threshold": 0.2,
+      "recall_first": true
+    },
+    "child_safety_concern": {
+      "precision": 0.857,
+      "recall": 0.981,
+      "f1": 0.915,
+      "support": 257,
+      "threshold": 0.35,
+      "hedge_threshold": 0.55,
+      "recall_first": true
+    },
+    "cybercrime_online_abuse": {
+      "precision": 0.893,
+      "recall": 0.93,
+      "f1": 0.911,
+      "support": 243,
+      "threshold": 0.69,
+      "hedge_threshold": 0.2,
+      "recall_first": false
+    },
+    "depression_hopelessness": {
+      "precision": 0.883,
+      "recall": 0.989,
+      "f1": 0.933,
+      "support": 451,
+      "threshold": 0.39,
+      "hedge_threshold": 0.24,
+      "recall_first": false
+    },
+    "displacement_arson": {
+      "precision": 0.822,
+      "recall": 0.978,
+      "f1": 0.893,
+      "support": 179,
+      "threshold": 0.35,
+      "hedge_threshold": 0.7,
+      "recall_first": true
+    },
+    "elder_abuse": {
+      "precision": 0.909,
+      "recall": 1.0,
+      "f1": 0.952,
+      "support": 250,
+      "threshold": 0.35,
+      "hedge_threshold": 0.2,
+      "recall_first": true
+    },
+    "family_murder": {
+      "precision": 0.892,
+      "recall": 0.973,
+      "f1": 0.931,
+      "support": 187,
+      "threshold": 0.35,
+      "hedge_threshold": 0.52,
+      "recall_first": true
+    },
+    "financial_exploitation": {
+      "precision": 0.889,
+      "recall": 0.975,
+      "f1": 0.93,
+      "support": 354,
+      "threshold": 0.54,
+      "hedge_threshold": 0.41,
+      "recall_first": false
+    },
+    "immediate_danger": {
+      "precision": 0.882,
+      "recall": 0.957,
+      "f1": 0.918,
+      "support": 188,
+      "threshold": 0.35,
+      "hedge_threshold": 0.2,
+      "recall_first": true
+    },
+    "intimidation_threat": {
+      "precision": 0.903,
+      "recall": 0.962,
+      "f1": 0.932,
+      "support": 398,
+      "threshold": 0.61,
+      "hedge_threshold": 0.45,
+      "recall_first": false
+    },
+    "legal_dispute": {
+      "precision": 0.865,
+      "recall": 0.944,
+      "f1": 0.903,
+      "support": 306,
+      "threshold": 0.34,
+      "hedge_threshold": 0.2,
+      "recall_first": false
+    },
+    "physical_safety_abuse": {
+      "precision": 0.825,
+      "recall": 0.983,
+      "f1": 0.897,
+      "support": 355,
+      "threshold": 0.35,
+      "hedge_threshold": 0.25,
+      "recall_first": true
+    },
+    "police_noncooperation": {
+      "precision": 0.756,
+      "recall": 0.948,
+      "f1": 0.841,
+      "support": 249,
+      "threshold": 0.35,
+      "hedge_threshold": 0.71,
+      "recall_first": true
+    },
+    "rape_sexual_violence": {
+      "precision": 0.858,
+      "recall": 0.977,
+      "f1": 0.914,
+      "support": 217,
+      "threshold": 0.35,
+      "hedge_threshold": 0.5,
+      "recall_first": true
+    },
+    "severe_trauma_fear": {
+      "precision": 0.886,
+      "recall": 0.95,
+      "f1": 0.917,
+      "support": 499,
+      "threshold": 0.48,
+      "hedge_threshold": 0.2,
+      "recall_first": false
+    },
+    "sexual_harassment_assault": {
+      "precision": 0.875,
+      "recall": 0.967,
+      "f1": 0.919,
+      "support": 246,
+      "threshold": 0.31,
+      "hedge_threshold": 0.2,
+      "recall_first": true
+    },
+    "social_boycott": {
+      "precision": 0.853,
+      "recall": 0.98,
+      "f1": 0.912,
+      "support": 248,
+      "threshold": 0.35,
+      "hedge_threshold": 0.5,
+      "recall_first": true
+    },
+    "social_isolation": {
+      "precision": 0.888,
+      "recall": 0.931,
+      "f1": 0.909,
+      "support": 475,
+      "threshold": 0.51,
+      "hedge_threshold": 0.2,
+      "recall_first": false
+    },
+    "substance_related": {
+      "precision": 0.925,
+      "recall": 0.963,
+      "f1": 0.943,
+      "support": 268,
+      "threshold": 0.62,
+      "hedge_threshold": 0.2,
+      "recall_first": false
+    },
+    "suicidal_ideation": {
+      "precision": 0.839,
+      "recall": 0.966,
+      "f1": 0.898,
+      "support": 264,
+      "threshold": 0.31,
+      "hedge_threshold": 0.2,
+      "recall_first": true
+    },
+    "vulnerability_context": {
+      "precision": 0.927,
+      "recall": 0.935,
+      "f1": 0.931,
+      "support": 352,
+      "threshold": 0.56,
+      "hedge_threshold": 0.2,
+      "recall_first": false
+    },
+    "witness_intimidation": {
+      "precision": 0.88,
+      "recall": 0.962,
+      "f1": 0.919,
+      "support": 237,
+      "threshold": 0.33,
+      "hedge_threshold": 0.2,
+      "recall_first": true
+    },
+    "workplace_harassment": {
+      "precision": 0.859,
+      "recall": 0.975,
+      "f1": 0.913,
+      "support": 200,
+      "threshold": 0.39,
+      "hedge_threshold": 0.2,
+      "recall_first": false
+    }
+  },
+  "multilabel": {
+    "micro_f1": 0.9037,
+    "micro_precision": 0.867,
+    "micro_recall": 0.9437,
+    "macro_f1": 0.9015
+  },
+  "band_accuracy": {
+    "model": 0.8013,
+    "lexicon_baseline": 0.3148
+  },
+  "escalation_recall_high_or_critical": {
+    "model": 0.9831,
+    "lexicon_baseline": 0.1901
+  },
+  "critical_recall": {
+    "model": 0.9766,
+    "lexicon_baseline": 0.2124
+  },
+  "false_escalation_rate_on_low_risk": {
+    "model": 0.3387,
+    "lexicon_baseline": 0.0377
+  },
+  "severity_mae": {
+    "model": 11.63,
+    "lexicon_baseline": 48.24
+  },
+  "disagreement": {
+    "lexicon_missed_model_caught": 3868,
+    "model_missed_lexicon_caught": 18
+  },
+  "negation_handling": {
+    "note": "Explicitly DENIED disclosures ('it is not the case that he hits me'). Counted as an error when the system records the category anyway. The rule engine only inspects a 4-token window before a match, so long-range denials are invisible to it; the model sees the whole sentence.",
+    "negated_mentions": 767,
+    "false_positive_rate_model": 0.8696,
+    "false_positive_rate_lexicon": 0.1343
+  },
+  "confusion_matrix_labels": [
+    "Low",
+    "Moderate",
+    "High",
+    "Critical"
+  ],
+  "confusion_matrix_model": [
+    [
+      714,
+      110,
+      142,
+      280
+    ],
+    [
+      22,
+      439,
+      124,
+      82
+    ],
+    [
+      19,
+      11,
+      813,
+      334
+    ],
+    [
+      35,
+      4,
+      29,
+      2842
+    ]
+  ],
+  "confusion_matrix_lexicon": [
+    [
+      1188,
+      11,
+      4,
+      43
+    ],
+    [
+      602,
+      35,
+      15,
+      15
+    ],
+    [
+      1052,
+      26,
+      48,
+      51
+    ],
+    [
+      2194,
+      38,
+      60,
+      618
+    ]
+  ],
+  "per_language": {
+    "en": {
+      "n": 2479,
+      "band_accuracy_model": 0.8068,
+      "band_accuracy_lexicon": 0.3526,
+      "severity_mae_model": 11.1
+    },
+    "gu": {
+      "n": 827,
+      "band_accuracy_model": 0.7823,
+      "band_accuracy_lexicon": 0.2539,
+      "severity_mae_model": 12.89
+    },
+    "hi": {
+      "n": 1197,
+      "band_accuracy_model": 0.8145,
+      "band_accuracy_lexicon": 0.3083,
+      "severity_mae_model": 11.3
+    },
+    "rom": {
+      "n": 1497,
+      "band_accuracy_model": 0.7923,
+      "band_accuracy_lexicon": 0.2912,
+      "severity_mae_model": 12.09
+    }
+  },
+  "train_size": 25500,
+  "val_size": 4500,
+  "feature_dims": 59630,
+  "train_seconds": 222.6,
+  "model_file": "sahayk_triage.joblib",
+  "model_size_mb": 9.21
+}

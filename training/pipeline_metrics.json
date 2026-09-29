@@ -1,0 +1,154 @@
+{
+  "n_test": 6000,
+  "note": "Held-out synthetic corpus, rubric-derived labels. Unseen phrasings built from seen vocabulary. Not a clinical validation and not a measurement on real calls.",
+  "metric_notes": {
+    "escalation_recall": "of cases truly High/Critical, the share placed in High/Critical \u2014 the safety metric",
+    "critical_recall": "of cases truly Critical, the share placed in Critical",
+    "false_escalation_rate": "of cases truly Low, the share wrongly escalated \u2014 the reviewer-workload cost",
+    "negation_false_positive_rate": "of explicitly DENIED disclosures, the share still recorded"
+  },
+  "systems": {
+    "rules_only": {
+      "band_accuracy": 0.3148,
+      "severity_mae": 48.24,
+      "escalation_recall": 0.1901,
+      "critical_recall": 0.2124,
+      "false_escalation_rate": 0.0377,
+      "negation_false_positive_rate": 0.1343,
+      "confusion_matrix": [
+        [
+          1188,
+          11,
+          4,
+          43
+        ],
+        [
+          602,
+          35,
+          15,
+          15
+        ],
+        [
+          1052,
+          26,
+          48,
+          51
+        ],
+        [
+          2194,
+          38,
+          60,
+          618
+        ]
+      ]
+    },
+    "model_ungated": {
+      "band_accuracy": 0.8013,
+      "severity_mae": 11.63,
+      "escalation_recall": 0.9831,
+      "critical_recall": 0.9766,
+      "false_escalation_rate": 0.3387,
+      "negation_false_positive_rate": 0.8696,
+      "confusion_matrix": [
+        [
+          714,
+          110,
+          142,
+          280
+        ],
+        [
+          22,
+          439,
+          124,
+          82
+        ],
+        [
+          19,
+          11,
+          813,
+          334
+        ],
+        [
+          35,
+          4,
+          29,
+          2842
+        ]
+      ]
+    },
+    "union_no_guard": {
+      "band_accuracy": 0.8418,
+      "severity_mae": 9.44,
+      "escalation_recall": 0.9797,
+      "critical_recall": 0.9725,
+      "false_escalation_rate": 0.2047,
+      "negation_false_positive_rate": 0.3299,
+      "confusion_matrix": [
+        [
+          907,
+          84,
+          77,
+          178
+        ],
+        [
+          24,
+          462,
+          104,
+          77
+        ],
+        [
+          21,
+          12,
+          852,
+          292
+        ],
+        [
+          44,
+          6,
+          30,
+          2830
+        ]
+      ]
+    },
+    "served_pipeline": {
+      "band_accuracy": 0.827,
+      "severity_mae": 9.11,
+      "escalation_recall": 0.9645,
+      "critical_recall": 0.9481,
+      "false_escalation_rate": 0.1429,
+      "negation_false_positive_rate": 0.3299,
+      "confusion_matrix": [
+        [
+          912,
+          156,
+          91,
+          87
+        ],
+        [
+          42,
+          455,
+          104,
+          66
+        ],
+        [
+          24,
+          41,
+          836,
+          276
+        ],
+        [
+          45,
+          35,
+          71,
+          2759
+        ]
+      ]
+    }
+  },
+  "confusion_matrix_labels": [
+    "Low",
+    "Moderate",
+    "High",
+    "Critical"
+  ]
+}
