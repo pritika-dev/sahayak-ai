@@ -37,10 +37,24 @@ def _startup_warmup():
     one-time startup cost landing in the wrong place. Running it here
     means it happens once, during startup, before anyone is waiting on
     it — every real voice message after this is ~1-2 seconds."""
-    try:
-        warm_up()
-    except Exception:
-        pass  # never block server startup on this — worst case, the first real message pays the cost instead
+    # Runs in a background thread so the server opens its port at once.
+    # On a small cloud instance (Render free) this warm-up took ~85 s; done
+    # inline it kept the port closed that long, and a cold-start visitor got
+    # "Not Found" from Render instead of the app.
+    import threading
+
+    def _bg():
+        try:
+            import ml_model
+            ml_model._load()   # load the trained model before the first message
+        except Exception:
+            pass
+        try:
+            warm_up()
+        except Exception:
+            pass  # never fatal — worst case, the first real voice message pays the cost
+
+    threading.Thread(target=_bg, daemon=True).start()
 
 
 @app.exception_handler(Exception)
@@ -66,12 +80,18 @@ async def catch_all(request: Request, exc: Exception):
 # browsers can serve a stale cached copy after you unzip an updated
 # version, showing old UI/behavior that was already fixed server-side.
 
-@app.get("/")
+@app.api_route("/", methods=["GET", "HEAD"])
 def victim_chat_page():
     return FileResponse(FRONTEND_DIR / "chat.html", headers={"Cache-Control": "no-store"})
 
 
-@app.get("/authority")
+@app.api_route("/health", methods=["GET", "HEAD"])
+def health():
+    """Cheap check for uptime pingers and the demo landing page."""
+    return {"ok": True}
+
+
+@app.api_route("/authority", methods=["GET", "HEAD"])
 def authority_page():
     return FileResponse(FRONTEND_DIR / "authority.html", headers={"Cache-Control": "no-store"})
 
